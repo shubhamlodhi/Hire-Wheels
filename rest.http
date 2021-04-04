@@ -1,0 +1,65 @@
+
+### Home
+GET http://127.0.0.1:8080/
+
+
+
+
+### Sign-Up
+POST http://127.0.0.1:8080/hirewheels/v1/users
+Content-Type: application/json
+
+{
+   "firstName":"Shubham",
+   "lastName":"Lodhi", 
+   "email": "tanmay969@test.com",
+   "mobileNo": 7869591429,
+   "password": "password"
+}
+
+
+### Sign-In
+POST http://127.0.0.1:8080/hirewheels/v1/users/access-token
+Content-Type: application/json
+
+{
+   "email": "tanmay696@test.com",
+   "password": "password"
+}
+
+
+### Get-Vehicles
+GET http://127.0.0.1:8080/hirewheels/v1/vehicles
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTc1NjIwNDYsImV4cCI6MTYxNzU2NTY0NiwiYXVkIjoiNjA2OTZiM2FjNDJlNzMyMGIwODdjZWIyIiwiaXNzIjoic2h1YmhhbWxvZGhpLmdpdGh1Yi5pbyJ9.njcfmxPtF-aoV2UEYqxkLPwoVuJzhw5__iZbyOYakPU
+
+
+### Add-Vehicles
+POST http://127.0.0.1:8080/hirewheels/v1/vehicles
+Content-Type: application/json
+
+{
+    "vehicleModel": "abc1",
+    "vehicleNumber":"nop1",
+    "vehicleOwner": "abc",
+    "vehicleType": "car",
+    "fuelType":"petrol",
+    "vehicleColor":"car",
+    "vehicleImage":"car",
+    "vehicleSubcategory":"suv",    
+    "pricePerHour": 23  
+}
+
+
+### Book-Vehicles
+POST http://127.0.0.1:8080/hirewheels/v1/bookings
+Content-Type: application/json
+
+{   
+"user":"60696b3ac42e7320b087ceb2",
+"vehicle":"6069ae1f3e8e04792c06f977",
+"amount":123
+
+
+
+
+}    
